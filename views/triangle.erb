@@ -1,0 +1,18 @@
+<h1>What kind of triangle is it?</h1>
+
+  <h5> Side 1: <%= @triangle.side1() %></h5>
+  <h5> Side 2: <%= @triangle.side2() %></h5>
+  <h5> Side 3: <%= @triangle.side3() %></h5>
+
+<% if @triangle.is_not_triangle?() %>
+  <h5>It is not a triangle</h5>
+<% elsif @triangle.is_equilateral?() %>
+  <h5>It is an equilateral triangle</h5>
+<% elsif @triangle.is_isosceles?() %>
+  <h5>It is an isosceles triangle</h5>
+<% else %>
+ <h5>It is an scalene triangle</h5>
+<% end %>
+
+
+<a class="btn btn_success">Return</a>

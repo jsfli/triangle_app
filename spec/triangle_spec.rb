@@ -3,6 +3,14 @@ require('triangle')
 require('pry')
 
 describe (Triangle) do
+
+  describe ("#side1") do
+    it('returns side1 of the Triangle') do
+      new_triangle = Triangle.new(1,1,1)
+      expect(new_triangle.side1()).to(eq(1))
+    end
+  end
+
   describe ("#side1") do
     it('returns side1 of the Triangle') do
       new_triangle = Triangle.new(1,1,1)
@@ -43,8 +51,8 @@ describe (Triangle) do
 
       describe ("is_not_triangle?") do
         it('returns false if the sum of the lengths of any two sides of a triangle is less than or equal to the length of the third side.') do
-          new_triangle = Triangle.new(2,8,2)
-          expect(new_triangle.is_not_triangle?()).to(eq(true))
+          new_triangle = Triangle.new(3,4,5)
+          expect(new_triangle.is_not_triangle?()).to(eq(false))
         end
       end
 
